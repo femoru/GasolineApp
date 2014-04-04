@@ -1,0 +1,26 @@
+{
+  "name": "GasolineApp",
+  "version": "1.0",
+  "release_notes": "First release",
+  "description": "This app gives you information your Gasoline consume!",
+  "launch_path": "/index.html",
+  "icons": {
+    "32": "/css/images/icons-png2/47-fuel.png",
+    "64": "/icons/icon-64.png",
+    "128": "/icons/icon-128.png",
+    "256": "icons/icon-256.png"
+  },
+  "developer": {
+    "name": "RhadhyApps"
+  },
+  "default_locale": "es",
+  "type": "privileged",
+  "permissions": {
+    "storage": {
+      "description": "Required to storage data"
+    },
+	"geolocation": {
+		"description" : "Used to locate me"
+	}
+  }
+}

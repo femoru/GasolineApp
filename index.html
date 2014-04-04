@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <title>GasolineApp</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/glyphish.css">
+	<link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css">
+	<script src="js/jquery.js"></script>
+    <script src="js/jquery.mobile.min.js"></script>
+	<script src="js/app.js"></script>
+</head>
+<body >
+	<div data-role="page" id="ultimo">
+		<div data-role="header" data-theme="b">
+			<a href="#" data-icon="fuel" data-role="button" data-iconpos="notext">Cancel</a>
+			<h1>GasolineApp</h1>
+			<a href="#" data-icon="grid" data-role="button" data-iconpos="notext">Save</a>
+			<div data-role="navbar" data-mini="true" data-insets="true" data-iconpos="left"> 
+				<ul data-mini="true" > 
+					<li><a href="#ultimo" class="btnUlt" data-icon="home">Ultimo</a></li>
+					<li><a href="#nuevo" data-icon="plus">Nuevo</a></li>
+					<li><a href="#historial" data-icon="star">Historial</a></li>
+				</ul>
+			</div>
+		</div><!-- /header -->
+         <div data-role="content" >
+            <h1>Ultimo Tanqueo</h1>
+			<p>Fecha: <span id="spFecha"></span></p>
+			<p>Valor: $<span id="spTotal">0</span></p>
+			<p>Galones: <span id="spGalones">0</span> galon(es)</p>
+			<p>Kilometraje: <span id="spRecorrido">0</span> km</p>
+			<p>Rendimiento: <span id="spRendimiento">0</span> km/galon</p>
+			<div id="mapa"></div>
+			
+        </div><!-- /content -->
+ 
+        <div data-role="footer" data-theme="b">
+			<h4>Powered by <a href="https://twitter.com/rhadhy" style="text-decoration: none;">@ Rhadhy</a></h4>
+			<h5><a href="http://www.glyphish.com/" title="www.glyphish.com" data-inline="true"><img src="css/images/glyphish-badge-dark.png" width="30px"/></a></h5>
+        </div><!-- /footer -->
+ 
+    </div><!-- /page Ultimo -->
+
+    <div data-role="page" id="nuevo">
+		<div data-role="header" data-theme="b">
+			<a href="#" data-icon="fuel" data-role="button" data-iconpos="notext">Cancel</a>
+			<h1>GasolineApp</h1>
+			<a href="#" data-icon="grid" data-role="button" data-iconpos="notext">Save</a>
+			<div data-role="navbar" data-mini="true" data-insets="true" data-iconpos="left"> 
+				<ul data-mini="true" > 
+					<li><a href="#ultimo" class="btnUlt" data-icon="home">Ultimo</a></li>
+					<li><a href="#nuevo" data-icon="plus">Nuevo</a></li>
+					<li><a href="#historial" data-icon="star">Historial</a></li>
+				</ul>
+			</div>
+		</div><!-- /header -->
+         <div data-role="content" >
+            <h1>Nuevo Consumo</h1>
+			<label for="km">Kilometraje Actual</label>
+			<input type="number" name="km" id="km" min="1" max="999999"/>
+			<label for="galon">Vlr Galon </label>
+			<input type="number" name="galon" id="galon" min="1000" max="999999"/>
+			<label for="total">Vlr Tanqueo </label>
+			<input type="number" name="total" id="total" min="1000" max="999999"/>
+			<input type="button" value="Guardar" id="consumo" data-theme="b"/>
+        </div><!-- /content -->
+ 
+        <div data-role="footer" data-theme="b">
+			<h4>Powered by <a href="https://twitter.com/rhadhy" style="text-decoration: none;">@ Rhadhy</a></h4>
+			<h5><a href="http://www.glyphish.com/" title="www.glyphish.com" data-inline="true"><img src="css/images/glyphish-badge-dark.png" width="30px"/></a></h5>
+        </div><!-- /footer -->
+ 
+    </div><!-- /page Nuevo -->
+	
+	<div data-role="page" id="historial">
+		<div data-role="header" data-theme="b">
+			<a href="#" data-icon="fuel" data-role="button" data-iconpos="notext">Cancel</a>
+			<h1>GasolineApp</h1>
+			<a href="#" data-icon="grid" data-role="button" data-iconpos="notext">Save</a>
+			<div data-role="navbar" data-mini="true" data-insets="true" data-iconpos="left"> 
+				<ul data-mini="true" > 
+					<li><a href="#ultimo" class="btnUlt" data-icon="home">Ultimo</a></li>
+					<li><a href="#nuevo" data-icon="plus">Nuevo</a></li>
+					<li><a href="#historial" data-icon="star">Historial</a></li>
+				</ul>
+			</div>
+		</div><!-- /header -->
+		<div data-role="content">
+			<div id="historicoConsumos" ></div>
+			<input type="button" value="Limpiar" id="limpiarHistorial" data-theme="b"/>
+		</div>
+		<div data-role="footer" data-theme="b">
+			<h4>Powered by <a href="https://twitter.com/rhadhy" style="text-decoration: none;">@ Rhadhy</a></h4>
+			<h5><a href="http://www.glyphish.com/" title="www.glyphish.com" data-inline="true"><img src="css/images/glyphish-badge-dark.png" width="30px"/></a></h5>
+        </div><!-- /footer -->
+	</div> <!-- /page Historial -->
+
+	</body>
+</html>

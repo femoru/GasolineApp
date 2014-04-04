@@ -1,0 +1,10 @@
+.ui-icon-fuel {
+	background: url("images/icons-png2/47-fuel-w.png") 50% 50% no-repeat;
+	background-size: 18px 14px;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+h1{
+	text-align:center;
+}
