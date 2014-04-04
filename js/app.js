@@ -3,12 +3,13 @@ var ultimoConsumo;
 $(document).ready(function(){
 	ultimoConsumo = localStorage.getItem(localStorage.length - 1);
 	ultimoConsumo = JSON.parse(ultimoConsumo);
-	llenarHistorial();
+
 	if (ultimoConsumo != null) {
 		$("#km").val(ultimoConsumo.kmAnterior);
 		$("#galon").val(ultimoConsumo.vlrGalon);
 		$("#total").val(ultimoConsumo.totalGalon);	
 		mostrarUltimo();
+		llenarHistorial();
 	};
 
 	$("#consumo").on('click',function(){
